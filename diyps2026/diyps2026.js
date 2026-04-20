@@ -44,7 +44,7 @@ function draw() {
   if (keyIsPressed) {
     choice = key; // set choice to the key that was pressed
     clear_print(); // check to see if it is clear screen or save image
-  
+  }
     if (key === '[') {
     brushSize = brushSize + 1;
     }
@@ -65,54 +65,55 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
 
  if (toolChoice == '1' ) { // g places the image we pre-loaded
     image(img, mouseX-25-(brushSize/2), mouseY-25-(brushSize/2), 50 + brushSize, 50 + brushSize);
- 
-   
     strokeWeight(01);
     line(mouseX, mouseY, pmouseX, pmouseY);
     
   } else if (toolChoice == '2') { // second tool
-
     strokeWeight(30);
     line(mouseX, mouseY, pmouseX, pmouseY);
     strokeWeight(1);
-  } else if (toolChoice == '3') { // third tool
+  
+} else if (toolChoice == '3') { // third tool
     strokeWeight(30);
     stroke(68, 159, 227);
     line(mouseX, mouseY, pmouseX, pmouseY);
      strokeWeight(1);
     stroke('black')
-  } else if (toolChoice == '4') {
-
+  
+} else if (toolChoice == '4') {
     stroke(0, 0, 255);
     line(mouseX, mouseY, pmouseX, pmouseY);
-  } else if (key == '5') { // this tool calls a function
+  
+} else if (key == '5') { // this tool calls a function
     stroke(0, 0, 255);
     testbox(20, 20, 200);
     testbox(200, 20, 20);
     
  // make testbox do something!
  //   line(mouseX, mouseY, pmouseX, pmouseY);
-  } else if (toolChoice == '6') {
-
+  
+} else if (toolChoice == '6') {
     stroke(200);
     line(mouseX, mouseY, pmouseX, pmouseY);
-  } else if (toolChoice == '7') {
-
+  
+} else if (toolChoice == '7') {
     fill(100, 200, 100);
     rect(mouseX, mouseY, 20, 20);
-  } else if (toolChoice == '8') {
 
+} else if (toolChoice == '8') {
     fill(300, 100, 0, 80);
     rect(mouseX, mouseY, 20, 20);
-  } else if (toolChoice == '9') {
-
+ 
+} else if (toolChoice == '9') {
     fill(300, 100, 0, 80);
     rect(mouseX, mouseY, 40, 40);
-  } else if (toolChoice == '0') {
+
+} else if (toolChoice == '0') {
     stroke(0, 0);
     fill(random(255), random(255), random(255), random(255));
     rect(mouseX, mouseY, 200, 150);
-  } else if (toolChoice == 'g' || toolChoice == 'G') { // g places the image we pre-loaded
+
+} else if (toolChoice == 'g' || toolChoice == 'G') { // g places the image we pre-loaded
     image(img, mouseX 50, mouseY, 50);
     
   }else if (toolChoice == 'j' || toolChoice == 'J') { // g places the image we pre-loaded
