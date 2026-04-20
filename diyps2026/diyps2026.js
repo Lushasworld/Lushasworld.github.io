@@ -19,7 +19,7 @@ function preload() {
 // preload() runs once, it may make you wait
 //  img = loadImage('cat.jpg');  // cat.jpg needs to be next to this .js file
 // you can link to an image on your github account
-  screenbg = loadImage('https://lushasworld.github.io/images/extra.png');
+  screenbg = loadImage('https://lushasworld.github.io/images/backgroundextra.png');
   img1= loadImage('https://lushasworld.github.io/images/redline1.png');
   img2 = loadImage('https://lushasworld.github.io/images/purpeline2.png');
   img3 = loadImage('https://ironferris.github.io/images/yellowline3.png');
