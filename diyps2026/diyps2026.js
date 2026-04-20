@@ -1,5 +1,4 @@
-var img;
-var img, 
+var img; 
 var img2, 
 var img3, 
 var img4, 
