@@ -14,7 +14,7 @@ function draw() {
   noStroke();
   rect(0, 0, 160, 35);
 
-  fill(0);
+fill(0);
   textSize(16);
   text("Tool: " + choice, 10, 22);
 
