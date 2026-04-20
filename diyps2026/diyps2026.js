@@ -14,28 +14,28 @@ var choice = '1'; // starting choice, so it is not empty
 var screenbg = 250; // off white background
 var lastscreenshot=61; // last screenshot never taken
 
-var brushSize = 0;
+var brushSize = + 1;
 
 function preload() {
 // preload() runs once, it may make you wait
 //  img = loadImage('cat.jpg');  // cat.jpg needs to be next to this .js file
 // you can link to an image on your github account
   screenbg = loadImage('https://lushasworld.github.io/images/extra.png');
-  img = loadImage('https://lushasworld.github.io/images/heels.png');
-  img2 = loadImage('https://lushasworld.github.io/images/extra.png');
-  img3 = loadImage('https://ironferris.github.io/images/heels.png');
-  img4 = loadImage('https://ironferris.github.io/images/heels.png');
-  img5 = loadImage('https://ironferris.github.io/images/heels.png');
-  img6 = loadImage('https://ironferris.github.io/images/heels.png');
-  img7 = loadImage('https://ironferris.github.io/images/heels.png');
-  img8 = loadImage('https://ironferris.github.io/images/heels.png');
-  img9 = loadImage('https://ironferris.github.io/images/heels.png');
-  img0 = loadImage('https://ironferris.github.io/images/heels.png');
+  img1= loadImage('https://lushasworld.github.io/images/redline1.png');
+  img2 = loadImage('https://lushasworld.github.io/images/purpeline2.png');
+  img3 = loadImage('https://ironferris.github.io/images/yellowline3.png');
+  img4 = loadImage('https://ironferris.github.io/images/blackline4.png');
+  img5 = loadImage('https://ironferris.github.io/images/cyanline5.png');
+  img6 = loadImage('https://ironferris.github.io/images/blueline6.png');
+  img7 = loadImage('https://ironferris.github.io/images/greenline7.png');
+  img8 = loadImage('https://ironferris.github.io/images/orangeline8.png');
+  img9 = loadImage('https://ironferris.github.io/images/pinkline9.png');
+  img0 = loadImage('https://ironferris.github.io/images/witheline0.png');
 }
 
 function setup() {
 createCanvas(600, 600);  // canvas size
-background(screenbg);   // use our background screen color
+background(extra);   // use our background screen color
 
 } 
 
@@ -63,54 +63,37 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
   // graphic function
 
  if (toolChoice == '1' ) { // g places the image we pre-loaded
-    image(img, mouseX-25-(brushSize/2), mouseY-25-(brushSize/2), 50 + brushSize, 50 + brushSize);
-    strokeWeight(01);
-    line(mouseX, mouseY, pmouseX, pmouseY);
+    image(img1, mouseX-100, mouseY-50, 200, 100);
     
   } else if (toolChoice == '2') { // second tool
-    strokeWeight(30);
-    line(mouseX, mouseY, pmouseX, pmouseY);
-    strokeWeight(1);
+    image(img2, mouseX-100, mouseY-50, 200, 100);
   
 } else if (toolChoice == '3') { // third tool
-    strokeWeight(30);
-    stroke(68, 159, 227);
-    line(mouseX, mouseY, pmouseX, pmouseY);
-     strokeWeight(1);
-    stroke('black')
+    image(img3, mouseX-100, mouseY-50, 200, 100);
   
 } else if (toolChoice == '4') {
-    stroke(0, 0, 255);
-    line(mouseX, mouseY, pmouseX, pmouseY);
+    image(img4, mouseX-100, mouseY-50, 200, 100);
   
 } else if (key == '5') { // this tool calls a function
-    stroke(0, 0, 255);
-    testbox(20, 20, 200);
-    testbox(200, 20, 20);
+    image(img5, mouseX-100, mouseY-50, 200, 100);
     
  // make testbox do something!
  //   line(mouseX, mouseY, pmouseX, pmouseY);
   
 } else if (toolChoice == '6') {
-    stroke(200);
-    line(mouseX, mouseY, pmouseX, pmouseY);
+    image(img6, mouseX-100, mouseY-50, 200, 100);
   
 } else if (toolChoice == '7') {
-    fill(100, 200, 100);
-    rect(mouseX, mouseY, 20, 20);
+    image(img7, mouseX-100, mouseY-50, 200, 100);
 
 } else if (toolChoice == '8') {
-    fill(300, 100, 0, 80);
-    rect(mouseX, mouseY, 20, 20);
+    image(img8, mouseX-100, mouseY-50, 200, 100);
  
 } else if (toolChoice == '9') {
-    fill(300, 100, 0, 80);
-    rect(mouseX, mouseY, 40, 40);
-
+    image(img9 , mouseX-100, mouseY-50, 200, 100);
+    
 } else if (toolChoice == '0') {
-    stroke(0, 0);
-    fill(random(255), random(255), random(255), random(255));
-    rect(mouseX, mouseY, 200, 150);
+    image(img0, mouseX-100, mouseY-50, 200, 100);
 
 } else if (toolChoice == 'g' || toolChoice == 'G') { // g places the image we pre-loaded
     image(img, mouseX 50, mouseY, 50);
