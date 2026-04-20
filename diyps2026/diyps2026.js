@@ -1,28 +1,58 @@
 var img;
+var img, 
+var img2, 
+var img3, 
+var img4, 
+var img5, 
+var img6, 
+var img7, 
+var img8, 
+var img9, 
+var img0;
+
 var initials ='ld'; // your initials
 var choice = '1'; // starting choice, so it is not empty
 var screenbg = 250; // off white background
 var lastscreenshot=61; // last screenshot never taken
 
+var brushSize = 0;
+
 function preload() {
 // preload() runs once, it may make you wait
 //  img = loadImage('cat.jpg');  // cat.jpg needs to be next to this .js file
 // you can link to an image on your github account
-  img = loadImage('https://dma-git.github.io/images/heels.png');
-  img2 = loadImage('https://dma-git.github.io/images/extraheels.png');
+  screenbg = loadImage('https://lushasworld.github.io/images/extra.png');
+  img = loadImage('https://lushasworld.github.io/images/heels.png');
+  img2 = loadImage('https://lushasworld.github.io/images/extra.png');
+  img3 = loadImage('https://ironferris.github.io/images/heels.png');
+  img4 = loadImage('https://ironferris.github.io/images/heels.png');
+  img5 = loadImage('https://ironferris.github.io/images/heels.png');
+  img6 = loadImage('https://ironferris.github.io/images/heels.png');
+  img7 = loadImage('https://ironferris.github.io/images/heels.png');
+  img8 = loadImage('https://ironferris.github.io/images/heels.png');
+  img9 = loadImage('https://ironferris.github.io/images/heels.png');
+  img0 = loadImage('https://ironferris.github.io/images/heels.png');
 }
 
 function setup() {
 createCanvas(600, 600);  // canvas size
 background(screenbg);   // use our background screen color
 
-}
+} 
 
 function draw() {
   if (keyIsPressed) {
     choice = key; // set choice to the key that was pressed
     clear_print(); // check to see if it is clear screen or save image
-  }
+  
+    if (key === '[') {
+    brushSize = brushSize + 1;
+    }
+    
+    if (key === ']') {
+    brushSize = brushSize - 1;
+    }check to see if it is clear screen or save image
+
   if (mouseIsPressed){
     newkeyChoice(choice);  // if the mouse is pressed call newkeyChoice
   }
@@ -33,7 +63,8 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
   // just make sure each key option has the a stroke or fill and then what type of 
   // graphic function
 
- if (toolChoice == '1' ) {  // first tool
+ if (toolChoice == '1' ) { // g places the image we pre-loaded
+    image(img, mouseX-25-(brushSize/2), mouseY-25-(brushSize/2), 50 + brushSize, 50 + brushSize);
  
    
     strokeWeight(01);
@@ -82,10 +113,10 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
     fill(random(255), random(255), random(255), random(255));
     rect(mouseX, mouseY, 200, 150);
   } else if (toolChoice == 'g' || toolChoice == 'G') { // g places the image we pre-loaded
-    image(img, mouseX-30, mouseY,-30);
+    image(img, mouseX 50, mouseY, 50);
     
   }else if (toolChoice == 'j' || toolChoice == 'J') { // g places the image we pre-loaded
-    image(img2, mouseX-60, mouseY,-60);
+    image(img2, mouseX 60, mouseY, 60);
     
   }
  }
