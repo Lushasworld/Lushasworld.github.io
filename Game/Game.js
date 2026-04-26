@@ -8,10 +8,10 @@ var img2;
 
 function preload() {
 // preload() runs once, it may make you wait
-//  img = loadImage('200.webp');  // 200.webp needs to be next to this .js file
+//  img = loadImage('200.jpg');  // 200.jpg needs to be next to this .js file
 // you can link to an image on your github account
-   img = loadImage('https://lushasworld.github.io/gamepics/200.webp');
-   img2 = loadImage('https://lushasworld.github.io/gamepics/201.webp');
+   img = loadImage('https://lushasworld.github.io/gamepics/200.jpg');
+   img2 = loadImage('https://lushasworld.github.io/gamepics/201.jpg');
 }
 
 function setup() {
@@ -56,7 +56,6 @@ if(score>=5) {
 // ellipse(ballx, bally, ballSize, ballSize);
 line(ballx = ballSize/2, bally = ballSize/2, mouseX, mouseY);
 image(img, ballx, bally, ballSize, ballSize);
-  
   
   
 } // end level one
