@@ -11,7 +11,7 @@ function preload() {
 //  img = loadImage('200.jpg');  // 200.jpg needs to be next to this .js file
 // you can link to an image on your github account
    img = loadImage('https://lushasworld.github.io/gamepics/200.jpg');
-   img2 = loadImage('https://lushasworld.github.io/gamepics/201.jpg');
+   img2 = loadImage('https://lushasworld.github.io/gamepics/202.jpg');
 }
 
 function setup() {
