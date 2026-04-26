@@ -1,6 +1,6 @@
 var ballx = 300;
 var bally = 300;
-var ballSize = 40;
+var ballSize = 80;
 var score =0;
 var gameState = "L1";
 var img;
@@ -54,8 +54,8 @@ if(score>=5) {
 }
 
 // ellipse(ballx, bally, ballSize, ballSize);
-line(ballx = ballSize/2, bally = ballSize/2, mouseX, mouseY);
 image(img, ballx, bally, ballSize, ballSize);
+ line(ballx + ballSize/2, bally + ballSize/2, mouseX, mouseY); 
   
   
 } // end level one
