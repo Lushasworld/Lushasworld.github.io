@@ -4,6 +4,7 @@ var ballSize = 40;
 var score =0;
 var gameState = "L1";
 var img;
+var img2;
 
 function preload() {
 // preload() runs once, it may make you wait
@@ -45,16 +46,18 @@ if (distToBall<ballSize/2){
 ballx = random(width);
 bally = random(height);
 score = score +1;
-} //if distToBall
+}  //if distToBall
 
-if(score>=5){ 
+if(score>=5) { 
   gameState ="L2";
-
 }
-// ellipse(ballx, bally, ballSize, ballSize);
-line(ballx, bally, mouseX, mouseY); 
-image(img, ballx, bally, ballSize, ballSize);
 
+// ellipse(ballx, bally, ballSize, ballSize);
+line(ballx = ballSize/2, bally = ballSize/2, mouseX, mouseY);
+image(img, ballx, bally, ballSize, ballSize);
+  
+  
+  
 } // end level one
 
 
@@ -73,11 +76,12 @@ if(score>=10) {
  gameState ="L3";
 }
 
-ellipse(ballx, bally, ballSize,
-ballSize);
+// ellipse(ballx, bally, ballSize, ballSize);
 // line(ballx, bally, mouseX, mouseY); 
+image(img2, ballx, bally, ballSize, ballSize);
 
 } // end level two
+
 
 function levelThree(){
   
