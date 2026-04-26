@@ -21,7 +21,7 @@ function preload() {
    img3 = loadImage('https://lushasworld.github.io/gamepics/203.jpg');
    img4 = loadImage('https://lushasworld.github.io/gamepics/redcarpet.png');
    img5 = loadImage('https://lushasworld.github.io/gamepics/redcarpet2.png');
-   winGif = loadImage('https://lushasworld.github.io/gamepics/congrats.gif');
+   winGif = loadImage('https://lushasworld.github.io/game/congrats.gif');
 }
 
 function setup() {
@@ -34,17 +34,13 @@ function setup() {
 function draw() {
   
 background(220); 
-if (gameState === "L1"){
- 
+if (gameState === "L1") { 
 levelOne();
-}
-if (gameState === "L2"){
+} else if (gameState === "L2") {
   levelTwo();
-}
-if (gameState === "L3"){
+} else if (gameState === "L3") {
   levelThree();
-}
-if (gameState === "win"){
+} else if (gameState === "win") {
     levelWin();
 }
 
@@ -106,7 +102,7 @@ if (distToBall<ballSize/2){
 ballx = random(width);
 bally = random(height);
 score = score +1;
-ballSize= ballSize -1;
+ballSize= max(10, ballSize -1);
 }
 
 if (score > 19) {
