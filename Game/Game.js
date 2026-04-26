@@ -18,7 +18,7 @@ function preload() {
 // you can link to an image on your github account
    img = loadImage('https://lushasworld.github.io/gamepics/200.jpg');
    img2 = loadImage('https://lushasworld.github.io/gamepics/202.jpg');
-   img3 = loadImage('https://lushasworld.github.io/gamepics/202.jpg');
+   img3 = loadImage('https://lushasworld.github.io/gamepics/203.jpg');
    img4 = loadImage('https://lushasworld.github.io/gamepics/redcarpet.png');
    img5 = loadImage('https://lushasworld.github.io/gamepics/redcarpet2.png');
    winGif = loadImage('https://lushasworld.github.io/gamepics/congrats.gif');
@@ -52,7 +52,7 @@ text(("Score: " + score), width/2, 40);
 } // end draw
 
 function level0ne(){
-  background(img4);
+  background(img3);
 text("level 1", width/2, height-20);
 var distToBall = dist(ballx, bally, mouseX, mouseY);
 
@@ -75,7 +75,7 @@ image(img, ballx, bally, ballSize, ballSize);
 
 
 function levelTwo(){
-  background(img5);
+  background(img2);
 text("level 2", width/2, height-20);
 var distToBall = dist(ballx, bally, mouseX, mouseY);
 
@@ -98,7 +98,7 @@ image(img2, ballx, bally, ballSize, ballSize);
 
 
 function levelThree(){
-  
+  background(img); 
 text("level 3", width/2, height-20);
 var distToBall = dist(ballx, bally, mouseX, mouseY);
 
