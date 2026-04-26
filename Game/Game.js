@@ -25,7 +25,7 @@ function preload() {
 }
 
 function setup() {
- createCanvas(600,600); 
+ createCanvas(800,600); 
  textAlign(CENTER);
  textSize(20);
  
@@ -34,14 +34,14 @@ function setup() {
 function draw() {
   
 background(220); 
-if (gameState == "L1"){
+if (gameState === "L1"){
  
-level0ne();
+levelOne();
 }
-if (gameState == "L2"){
+if (gameState === "L2"){
   levelTwo();
 }
-if (gameState == "L3"){
+if (gameState === "L3"){
   levelThree();
 }
 if (gameState === "win"){
@@ -51,7 +51,7 @@ if (gameState === "win"){
 text(("Score: " + score), width/2, 40);
 } // end draw
 
-function level0ne(){
+function levelOne(){
   background(img3);
 text("level 1", width/2, height-20);
 var distToBall = dist(ballx, bally, mouseX, mouseY);
@@ -75,7 +75,7 @@ image(img, ballx, bally, ballSize, ballSize);
 
 
 function levelTwo(){
-  background(img2);
+  background(img3);
 text("level 2", width/2, height-20);
 var distToBall = dist(ballx, bally, mouseX, mouseY);
 
@@ -98,7 +98,7 @@ image(img2, ballx, bally, ballSize, ballSize);
 
 
 function levelThree(){
-  background(img); 
+  background(img2); 
 text("level 3", width/2, height-20);
 var distToBall = dist(ballx, bally, mouseX, mouseY);
 
@@ -114,9 +114,7 @@ if (score > 19) {
   }
 
 function levelWin() {
-  image(congrats.gif, 0, 0, width, height);
-
-
+  image(winGif, 0, 0, width, height);
 } //if distToBall
 
 // if(score>=10) {
