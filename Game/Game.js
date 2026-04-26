@@ -11,6 +11,7 @@ function preload() {
 //  img = loadImage('200.webp');  // 200.webp needs to be next to this .js file
 // you can link to an image on your github account
    img = loadImage('https://lushasworld.github.io/gamepics/200.webp');
+   img2 = loadImage('https://lushasworld.github.io/gamepics/201.webp');
 }
 
 function setup() {
@@ -76,9 +77,10 @@ if(score>=10) {
  gameState ="L3";
 }
 
+image(img2, ballx, bally, ballSize, ballSize);
 // ellipse(ballx, bally, ballSize, ballSize);
 // line(ballx, bally, mouseX, mouseY); 
-image(img2, ballx, bally, ballSize, ballSize);
+
 
 } // end level two
 
