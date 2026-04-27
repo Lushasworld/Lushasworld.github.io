@@ -8,8 +8,6 @@ var gameState = "L1";
 var img;
 var img2;
 var img3;
-var img4;
-var img5;
 var winGif;
 
 function preload() {
