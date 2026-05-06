@@ -5,19 +5,16 @@ let currentColor;
 let bgImg;
 
 function preload() {
-  // bgImg = loadImage('images/backgroundextra.png');
+  bgImg = loadImage('images/backgroundextra.png');
 }
 
 function setup() {
   createCanvas(600, 600);
-  background(200, 0, 0);
+  image(bgImg, 0, 0, width, height);
   currentColor = color(255, 0, 0);
 }
 
 function draw() {
-  // image(bgImg, 0, 0, width, height); 
-  background(255, 0, 0);
-
   // UI panel
   fill(240);
   noStroke();
@@ -71,4 +68,6 @@ function keyPressed() {
   } else if (key == 'p' || key == 'P') {
     saveCanvas(initials + day() + hour() + minute() + second(), 'jpg');
   }
+  else if (key == 'c' || key == 'C') {
+  background(255, 0, 0); // clean canvas
 }
