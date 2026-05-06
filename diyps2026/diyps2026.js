@@ -1,5 +1,11 @@
 let initials = 'ld';
 let currentColor;
+let brushSize = 5;
+let bgImg;
+
+function preload() {
+  bgImg = loadImage('extra.png'); // background shoe to color
+}
 
 function setup() {
   createCanvas(400, 400);
@@ -8,9 +14,11 @@ function setup() {
 }
 
 function draw() {
+   image(bgImg, 0, 0, width, height);
+  
   fill(currentColor);
   noStroke();
-  circle(mouseX, mouseY, 20);
+  circle(mouseX, mouseY, brushSize);
 
   // UI
   fill(255);
@@ -21,6 +29,12 @@ function draw() {
 }
 
 function keyPressed() {
+
+  if (key == '+') brushSize += 2;
+  if (key == '-') brushSize -= 2;
+
+  brushSize = constrain(brushSize, 1, 50);
+
   if (key == '1') currentColor = color(255, 0, 0);
   else if (key == '2') currentColor = color(128, 0, 255);
   else if (key == '3') currentColor = color(255, 255, 0);
