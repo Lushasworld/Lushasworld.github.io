@@ -1,10 +1,10 @@
 let initials = 'ld';
 let currentColor;
-let brushSize = 5;
+let brushSize = 10;
 let bgImg;
 
 function preload() {
-  bgImg = loadImage('extra.png'); // background shoe to color
+  bgImg = loadImage('extra.png');
 }
 
 function setup() {
