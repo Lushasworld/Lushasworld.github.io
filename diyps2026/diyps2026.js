@@ -5,7 +5,7 @@ let currentColor;
 let bgImg;
 
 function preload() {
-  bgImg = loadImage('images/backgroundextra.png');
+  bgImg = loadImage('diypsimages/extra.png');
 }
 
 function setup() {
@@ -13,16 +13,18 @@ function setup() {
   image(bgImg, 0, 0, width, height);
   currentColor = color(255, 0, 0);
 }
-
+ 
+ // JavaScript
+ 
 function draw() {
-  // UI panel
-  fill(240);
-  noStroke();
-  rect(0, 0, 160, 35);
+  image(bgImg, 0, 0, width, height);
 
-  fill(0);
-  textSize(16);
-  text("Tool: " + choice, 10, 22);
+  if (mouseIsPressed) {
+    fill(currentColor);
+    noStroke();
+    ellipse(mouseX, mouseY, 40, 40);
+  }
+}
 
   // Drawing tool
   if (mouseIsPressed) {
