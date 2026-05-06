@@ -8,7 +8,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(600, 600);
   background(0);
   currentColor = color(255);
 }
