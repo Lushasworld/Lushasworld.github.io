@@ -17,7 +17,6 @@ function setup() {
 
 function draw() {
   image(bgImg, 0, 0, width, height); 
-}
   
   fill(240);
   noStroke();
