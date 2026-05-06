@@ -9,17 +9,12 @@ function preload() {
 
 function setup() {
   createCanvas(600, 600);
-  currentColor = color(255, 0, 0);
 }
 
 function draw() {
-  image(bgImg, 0, 0, width, height);
-
-  if (mouseIsPressed) {
-    noStroke();
-    fill(currentColor);
-    ellipse(mouseX, mouseY, 40, 40);
-  }
+  background(100);
+  ellipse(mouseX, mouseY, 30, 30);
+}
 
   // UI
   fill(255);
