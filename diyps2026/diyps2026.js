@@ -8,7 +8,6 @@ function preload() {
   bgImg = loadImage('images/backgroundextra.png');
 }
 
-
 function setup() {
   createCanvas(600, 600);
   background(200);
@@ -17,9 +16,9 @@ function setup() {
 
 function draw() {
   // image(bgImg, 0, 0, width, height); 
-   background(255, 0, 0);
-}
-  
+  background(255, 0, 0);
+
+  // UI panel
   fill(240);
   noStroke();
   rect(0, 0, 160, 35);
@@ -28,6 +27,7 @@ function draw() {
   textSize(16);
   text("Tool: " + choice, 10, 22);
 
+  // Drawing tool
   if (mouseIsPressed) {
     noStroke();
     fill(currentColor);
