@@ -12,8 +12,14 @@ function setup() {
 }
 
 function draw() {
-  background(100);
-  ellipse(mouseX, mouseY, 30, 30);
+  background(0);
+
+  if (bgImg) {
+    image(bgImg, 0, 0, width, height);
+  }
+
+  fill(255);
+  ellipse(mouseX, mouseY, 20, 20);
 }
 
   // UI
