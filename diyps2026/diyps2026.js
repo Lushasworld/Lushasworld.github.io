@@ -4,7 +4,7 @@ let currentColor;
 let bgImg;
 
 function preload() {
-  bgImg = loadImage('../diypsimages/extra.png');
+  bgImg = loadImage('diypsimages/extra.png');
 }
 
 function setup() {
