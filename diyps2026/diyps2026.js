@@ -2,6 +2,12 @@ let initials = 'ld';
 let choice = '1';
 let lastscreenshot = 61;
 let currentColor;
+let bgImg;
+
+function preload() {
+  bgImg = loadImage('images/backgroundextra.png');
+}
+
 
 function setup() {
   createCanvas(600, 600);
@@ -10,6 +16,8 @@ function setup() {
 }
 
 function draw() {
+ image(bgImg, 0, 0, width, height); 
+  
   fill(240);
   noStroke();
   rect(0, 0, 160, 35);
@@ -56,8 +64,8 @@ function keyPressed() {
   } else if (key == '0') {
     choice = '0';
     currentColor = color(255);
-  } else if (key == 'x' || key == 'X') {
-    background(245);
+  }} else if (key == 'x' || key == 'X') {
+  image(bgImg, 0, 0, width, height);
   } else if (key == 'p' || key == 'P') {
     saveCanvas(initials + day() + hour() + minute() + second(), 'jpg');
   }
