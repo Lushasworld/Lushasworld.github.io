@@ -5,7 +5,7 @@ let currentColor;
 let bgImg;
 
 function preload() {
-  bgImg = loadImage('extra.png');
+  bgImg = loadImage('images/backgroundextra.png');
 }
 
 
