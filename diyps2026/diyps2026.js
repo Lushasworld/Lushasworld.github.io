@@ -8,15 +8,15 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(400, 400);
+  background(255, 0, 0);
 }
 
 function draw() {
-  background(0);
-
-  if (bgImg) {
-    image(bgImg, 0, 0, width, height);
-  }
+  fill(0, 255, 0);
+  textSize(30);
+  text("FUNCIONA ESTE ARCHIVO", 20, 200);
+}
 
   fill(255);
   ellipse(mouseX, mouseY, 20, 20);
