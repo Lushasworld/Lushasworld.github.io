@@ -64,8 +64,8 @@ function keyPressed() {
   } else if (key == '0') {
     choice = '0';
     currentColor = color(255);
-  }} else if (key == 'x' || key == 'X') {
-  image(bgImg, 0, 0, width, height);
+  } else if (key == 'x' || key == 'X') {
+    image(bgImg, 0, 0, width, height);
   } else if (key == 'p' || key == 'P') {
     saveCanvas(initials + day() + hour() + minute() + second(), 'jpg');
   }
