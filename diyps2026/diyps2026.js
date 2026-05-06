@@ -5,7 +5,7 @@ let currentColor;
 let bgImg;
 
 function preload() {
-  bgImg = loadImage('images/extra.png');
+  // bgImg = loadImage('images/extra.png');
 }
 
 
@@ -16,6 +16,9 @@ function setup() {
 }
 
 function draw() {
+   background(200);
+}
+  
  image(bgImg, 0, 0, width, height); 
   
   fill(240);
