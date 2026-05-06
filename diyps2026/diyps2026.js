@@ -5,22 +5,17 @@ let currentColor;
 let bgImg;
 
 function preload() {
-  bgImg = loadImage('diypsimages/extra.png');
+  bgImg = loadImage('diyps2026/extra.png');
 }
 
 function setup() {
   createCanvas(400, 400);
-  background(255, 0, 0);
+  background(0);
 }
 
 function draw() {
-  fill(0, 255, 0);
-  textSize(30);
-  text("FUNCIONA ESTE ARCHIVO", 100, 200);
-}
-
-  fill(255);
-  ellipse(mouseX, mouseY, 20, 20);
+  fill(255, 0, 0);
+  circle(mouseX, mouseY, 20);
 }
 
   // UI
