@@ -1,3 +1,4 @@
+console.log("JS cargó");
 let initials = 'ld';
 let choice = '1';
 let currentColor;
@@ -15,7 +16,7 @@ function setup() {
 function draw() {
   fill(0, 255, 0);
   textSize(30);
-  text("FUNCIONA ESTE ARCHIVO", 20, 200);
+  text("FUNCIONA ESTE ARCHIVO", 100, 200);
 }
 
   fill(255);
