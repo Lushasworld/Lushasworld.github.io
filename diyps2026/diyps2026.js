@@ -1,29 +1,23 @@
-console.log("JS cargó");
 let initials = 'ld';
-let choice = '1';
 let currentColor;
-let bgImg;
-
-function preload() {
-  bgImg = loadImage('diyps2026/extra.png');
-}
 
 function setup() {
   createCanvas(400, 400);
   background(0);
+  currentColor = color(255);
 }
 
 function draw() {
-  fill(255, 0, 0);
+  fill(currentColor);
+  noStroke();
   circle(mouseX, mouseY, 20);
-}
 
   // UI
   fill(255);
   rect(0, 0, 120, 30);
 
   fill(0);
-  text("Tool: " + choice, 10, 20);
+  text("Tool", 10, 20);
 }
 
 function keyPressed() {
@@ -39,7 +33,7 @@ function keyPressed() {
   else if (key == '0') currentColor = color(255);
 
   else if (key == 'c' || key == 'C') {
-    clear();
+    background(0);
   }
 
   else if (key == 'p' || key == 'P') {
