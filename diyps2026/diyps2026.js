@@ -5,12 +5,12 @@ let currentColor;
 let bgImg;
 
 function preload() {
-  bgImg = loadImage('images/backgroundextra.png');
+  // bgImg = loadImage('images/backgroundextra.png');
 }
 
 function setup() {
   createCanvas(600, 600);
-  background(200);
+  background(200, 0, 0);
   currentColor = color(255, 0, 0);
 }
 
