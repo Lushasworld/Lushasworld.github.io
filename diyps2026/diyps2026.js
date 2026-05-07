@@ -1,6 +1,6 @@
 let initials = 'ld';
 let currentColor;
-let brushSize = 10;
+let brushSize = 20;
 let bgImg;
 
 function preload() {
@@ -35,8 +35,8 @@ function keyPressed() {
 
   brushSize = constrain(brushSize, 1, 50);
 
-  if (key == '1') currentColor = color(255, 0, 0);
-  else if (key == '2') currentColor = color(128, 0, 255);
+  if (key == '1') currentColor = color(128, 0, 255);
+  else if (key == '2') currentColor = color(255, 0, 0);
   else if (key == '3') currentColor = color(255, 255, 0);
   else if (key == '4') currentColor = color(0);
   else if (key == '5') currentColor = color(0, 255, 255);
