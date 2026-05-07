@@ -1,6 +1,6 @@
 let initials = 'ld';
 let currentColor;
-let brushSize = 20;
+let brushSize = 10;
 let bgImg;
 
 function preload() {
@@ -51,8 +51,8 @@ function keyPressed() {
   else if (key == '0') currentColor = color(255);
 
   else if (key == 'c' || key == 'C') {
-    background(0);
-  }
+    image(bgImg, 0, 0, width, height);
+}
 
   else if (key == 'p' || key == 'P') {
     saveCanvas(initials + day() + hour() + minute() + second(), 'jpg');
