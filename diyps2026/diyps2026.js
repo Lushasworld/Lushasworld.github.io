@@ -9,16 +9,20 @@ function preload() {
 
 function setup() {
   createCanvas(600, 600);
-  background(0);
+  
+  // dibuja el fondo una sola vez
+  image(bgImg, 0, 0, width, height);
+ 
   currentColor = color(255);
 }
 
 function draw() {
-   image(bgImg, 0, 0, width, height);
-  
+  // image(bgImg, 0, 0, width, height);
+  if (mouseIsPressed) {
   fill(currentColor);
   noStroke();
   circle(mouseX, mouseY, brushSize);
+ }
 
   // UI
   fill(255);
