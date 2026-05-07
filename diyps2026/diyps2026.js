@@ -16,7 +16,7 @@ function setup() {
 
 function draw() {
 
-  // pintar solo cuando el mouse está presionado
+  // coloring when press mouse
   if (mouseIsPressed) {
     fill(currentColor);
     noStroke();
