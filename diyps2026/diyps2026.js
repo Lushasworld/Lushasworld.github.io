@@ -1,6 +1,6 @@
 let initials = 'ld';
 let currentColor;
-let brushSize = 10;
+let brushSize = 20;
 let bgImg;
 
 function preload() {
@@ -9,20 +9,19 @@ function preload() {
 
 function setup() {
   createCanvas(600, 600);
-  
-  // dibuja el fondo una sola vez
-  image(bgImg, 0, 0, width, height);
- 
   currentColor = color(255);
+
+  drawBackground();
 }
 
 function draw() {
-  // image(bgImg, 0, 0, width, height);
+
+  // pintar solo cuando el mouse está presionado
   if (mouseIsPressed) {
-  fill(currentColor);
-  noStroke();
-  circle(mouseX, mouseY, brushSize);
- }
+    fill(currentColor);
+    noStroke();
+    circle(mouseX, mouseY, brushSize);
+  }
 
   // UI
   fill(255);
@@ -30,6 +29,12 @@ function draw() {
 
   fill(0);
   text("Tool", 10, 20);
+}
+
+// función para mostrar el background
+function drawBackground() {
+  clear();
+  image(bgImg, 0, 0, width, height);
 }
 
 function keyPressed() {
@@ -50,9 +55,10 @@ function keyPressed() {
   else if (key == '9') currentColor = color(255, 105, 180);
   else if (key == '0') currentColor = color(255);
 
+  // limpiar y restaurar imagen
   else if (key == 'c' || key == 'C') {
-    image(bgImg, 0, 0, width, height);
-}
+    drawBackground();
+  }
 
   else if (key == 'p' || key == 'P') {
     saveCanvas(initials + day() + hour() + minute() + second(), 'jpg');
