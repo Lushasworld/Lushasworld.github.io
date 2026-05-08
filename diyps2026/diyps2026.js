@@ -1,6 +1,6 @@
 let initials = 'ld';
 let currentColor;
-let brushSize = 20;
+let brushSize = 10;
 let bgImg;
 
 function preload() {
